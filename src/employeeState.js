@@ -1,7 +1,7 @@
 import { createSlice, nanoid, createSelector } from "@reduxjs/toolkit";
 
 // Created a slice for managing employees
-const employeeSlice = createSlice({
+const employeeState = createSlice({
   name: "employees", // Named the slice for managing employees
   initialState: {
     entities: [], // Initialized the state with an empty array for storing employees
@@ -55,10 +55,10 @@ const employeeSlice = createSlice({
 
 // Extracted action creators and reducer from the slice
 export const { addEmployee, editEmployee, deleteEmployee } =
-  employeeSlice.actions;
+  employeeState.actions;
 
 // Exported the reducer function
-export default employeeSlice.reducer;
+export default employeeState.reducer;
 
 // Selected employee data from the state using selectors
 export const selectAllEmployees = createSelector(
@@ -73,4 +73,4 @@ export const selectEmployeeById = createSelector(
 );
 
 // Exported the reducer function separately
-export const { reducer } = employeeSlice;
+export const { reducer } = employeeState;

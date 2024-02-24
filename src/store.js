@@ -1,8 +1,8 @@
 // Imported necessary functions and modules from Redux Toolkit
 import { configureStore } from "@reduxjs/toolkit";
 
-// Imported the reducer from the employeeSlice file
-import employeeReducer from "./employeeSlice";
+// Imported the reducer from the employeeState file
+import employeeReducer from "./employeeState";
 
 // Configured the Redux store with the employee reducer
 const store = configureStore({
